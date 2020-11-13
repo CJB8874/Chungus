@@ -57,7 +57,7 @@ function main(gameState, side){
         }
 		
   	Dude1Direct = survDirection;
-	/*
+	
   	bestPathFound = false;
       currSurviveDistance = -7;
       while(bestPathFound == false && currSurviveDistance<0){
@@ -91,7 +91,7 @@ function main(gameState, side){
         }
 		
   	Dude2Direct = survDirection;
-	*/
+	
   	console.log(turn);
   	turn++;
   	//return [Dude1Direct, Dude2Direct, Dude3Direct];

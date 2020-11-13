@@ -24,7 +24,7 @@
 //	below in the explenation of the pathfinding functions. Each monster is controlled individually so that the monsters can be sent in 
 //	different directions to maximize the probability of survival. 
 //================================================================================================================================================
-
+//
 survDirection = 'none';
 turn =0;
 

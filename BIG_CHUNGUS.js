@@ -38,11 +38,10 @@ function main(gameState, side){
   	thirdDude = myTeam[2];
   	bestPathFound = false;
       	currSurviveDistance = -7;
-		tempBOI = currSurviveDistance
+		
       	while(bestPathFound == false && currSurviveDistance<0){
-		  tempBOI = currSurviveDistance
           [x,y] = firstDude.coord;
-          Path = PathFind1(x,y, pathState, tempBOI, side); 
+          Path = PathFind1(x,y, pathState, currSurviveDistance, side); 
           if(Path >= 0){
             bestPathFound = true;
           }

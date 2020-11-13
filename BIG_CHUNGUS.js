@@ -44,10 +44,12 @@ function main(gameState, side){
           if(Path >= 0){
             bestPathFound = true;
           }
+		  
           else{
           	pathState = gameState;
             currSurviveDistance ++;
             console.log("NO PATH FOUND1");
+			console.log(currSurviveDistance);
           }
           
         }
@@ -142,6 +144,7 @@ function PathFind1(x, y, pathState, pathLength, side){
 			SouthPath = PathFind1(x+1, y, pathState, pathLength+1);
 			if(SouthPath >= 0){
 				survDirection = 'south';
+				console.log('south');
 				return SouthPath;
 			}
 		  }
@@ -151,6 +154,7 @@ function PathFind1(x, y, pathState, pathLength, side){
 			EastPath = PathFind1(x, y+1, pathState, pathLength + 1);
 			if(EastPath >= 0){
 				survDirection = 'east';
+				console.log('east');
 				return EastPath;
 			}
 		  }
@@ -160,6 +164,7 @@ function PathFind1(x, y, pathState, pathLength, side){
 			WestPath = PathFind1(x, y-1, pathState, pathLength + 1);
 			if(WestPath >= 0){
 				survDirection = 'west';
+				console.log('west');
 				return WestPath;
 			}
 		  }
@@ -169,6 +174,7 @@ function PathFind1(x, y, pathState, pathLength, side){
 			  NorthPath = PathFind1(x-1, y, pathState, pathLength + 1);
 			if(NorthPath >= 0){
 				survDirection = 'north';
+				console.log('north');
 				return NorthPath;
 
 			}

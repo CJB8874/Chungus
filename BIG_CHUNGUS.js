@@ -94,8 +94,8 @@ function main(gameState, side){
 	
   	console.log(turn);
   	turn++;
-  	//return [Dude1Direct, Dude2Direct, Dude3Direct];
-	return [Dude1Direct];
+  	return [Dude1Direct, Dude2Direct, Dude3Direct];
+	//return [Dude1Direct];
 }
 
 

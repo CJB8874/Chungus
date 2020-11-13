@@ -24,7 +24,9 @@
 //	below in the explenation of the pathfinding functions. Each monster is controlled individually so that the monsters can be sent in 
 //	different directions to maximize the probability of survival. 
 //================================================================================================================================================
-//
+
+import java.util.Random;
+
 survDirection = 'none';
 turn =0;
 
@@ -37,7 +39,9 @@ function main(gameState, side){
   	secondDude = myTeam[1];
   	thirdDude = myTeam[2];
   	bestPathFound = false;
-      	currSurviveDistance = -7;
+	
+	val = getRandomNumberUsingNextInt(-7, -1);
+      	currSurviveDistance = val;
 		
       	while(bestPathFound == false && currSurviveDistance<0){
           [x,y] = firstDude.coord;
@@ -59,7 +63,10 @@ function main(gameState, side){
   	Dude1Direct = survDirection;
 	
   	bestPathFound = false;
-      currSurviveDistance = -7;
+	
+	val = getRandomNumberUsingNextInt(-7, -1);
+      	currSurviveDistance = val;
+	
       while(bestPathFound == false && currSurviveDistance<0){
          [x,y] = thirdDude.coord;
         if(PathFind3(x,y, pathState, currSurviveDistance, side) >= 0){
@@ -76,7 +83,10 @@ function main(gameState, side){
   	Dude3Direct = survDirection;
     
   	bestPathFound = false;
-    	currSurviveDistance = -7;
+	
+	val = getRandomNumberUsingNextInt(-7, -1);
+      	currSurviveDistance = val;
+	
       	while(bestPathFound == false && currSurviveDistance<0){
           [x,y] = secondDude.coord;
           if(PathFind2(x,y, pathState, currSurviveDistance, side) >= 0){
@@ -98,6 +108,11 @@ function main(gameState, side){
 	//return [Dude1Direct];
 }
 
+
+public int getRandomNumberUsingNextInt(int min, int max) {
+    Random random = new Random();
+    return random.nextInt(max - min) + min;
+}
 
 
 //================================================================================================================================================
